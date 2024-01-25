@@ -4,7 +4,9 @@ subtitle: "Statistics and Probability Primer"
 author: 
     - "Barry Quinn  CStat" 
 date: '`r Sys.Date()`' 
-format: revealjs
+format: 
+  revealjs:
+    slide-number: c/t
 css: mycssblend.css
 logo: img/qbslogo.png
 bibliography: references.bib
