@@ -1,0 +1,188 @@
+---
+title: "FIN7028: Advanced Financial Data Analytics" 
+subtitle: "Statistics and Probability Primer"
+author: 
+    - "Barry Quinn  CStat" 
+date: '`r Sys.Date()`' 
+format: revealjs
+css: mycssblend.css
+logo: img/qbslogo.png
+bibliography: references.bib
+---
+
+## Introduction to Statistics in Financial Analytics
+
+-   Statistics: Essential in decision-making and scientific inquiry.
+-   Key role in financial analytics: Modeling market behaviors, risk assessment, and trend forecasting.
+-   Integration with machine learning and big data in modern finance.
+
+## Statistical Modeling as an Iterative Process
+
+::: columns
+::: {.column width="70%"}
+![](img/Iterative problem solving seen as a feedback loop in financial analysis.png)
+:::
+
+::: {.column width="30%" .small}
+-   Inspired by George Box: Statistical models are continually refined and improved.
+-   Emphasizes the iterative nature of statistics in financial modeling.
+-   Models are approximations of reality: Need for humility and vigilance.
+:::
+:::
+
+## The Iterative Process in Financial Analysis
+
+-   Data Collection and Inductive Reasoning: Identifying patterns in financial data.
+-   Deductive Reasoning and Model Testing: Assumptions and empirical testing.
+-   Example: Understanding market trends through iterative modeling.
+
+## Model Refinement and Iteration
+
+-   Flexibility and Parsimony: Adapting models to new information.
+-   Continuous improvement based on empirical evidence.
+
+## Insights from Academic Sources
+
+### Bayesian Visualization and Workflow
+
+-   Importance of visualization in Bayesian data analysis.
+-   Role of visualization throughout the statistical workflow.
+
+## Andrew Gelman's Perspective on Iterative Modeling
+
+-  Continuous model refinement based on empirical evidence. 
+- Embracing imperfection in models: A key to effective financial analysis.
+
+## Implications for Financial Modeling and Decision-Making
+
+-   Financial markets' complexity requires iterative approaches.
+-   Benefits of iterative modeling: Improved responsiveness and effective communication.
+
+## Strategies for Implementing Iterative Approaches
+
+-   Embedding iterative thinking: Cross-functional collaboration and open feedback.
+-   Periodic audits and version control for continuous improvement.
+
+## George Box's Vision in Financial Decision-Making
+
+-   Iterative pursuit of excellence in financial modeling.
+-   Emphasis on self-evaluation, reflection, and revision for sustained success.
+
+## Scalar Quantities in Finance
+
+-   Scalars: Numerical values without direction, e.g., returns, exchange rates.
+-   Real-world application: Computing annualized return of a stock.
+-   R Example: Annualized Return Computation.
+
+## 
+
+**R Code: Annualized Return Computation**
+
+```{R}
+#| echo: true
+current_price <- 100
+initial_price <- 80
+holding_period <- 180 # Days
+annualized_return <- (current_price / initial_price)^(365 / holding_period) - 1
+print(annualized_return)
+```
+
+## Vectors and Matrix Algebra Basics
+
+-   Vectors: Arrays of numbers; matrices: Rectangular arrays.
+-   Example: Comparing monthly returns across different assets.
+-   R Example: Monthly Returns Comparison.
+
+## 
+
+**R Code: Monthly Returns Comparison**
+
+```{r}
+#| echo: true
+monthly_returns <- c(0.02, -0.01, 0.03)
+asset_names <- c("Asset A", "Asset B", "Asset C")
+returns_dataframe <- data.frame(Asset = asset_names, Return = monthly_returns)
+print(returns_dataframe)
+```
+
+## Functions in Finance
+
+-   Functions: Essential tools mapping inputs to outputs.
+-   Application: Calculating compound interest.
+-   R Example: Compound Interest Function.
+
+## 
+
+**R Code: Compound Interest Function**
+
+```{r}
+#| echo: true
+compound_interest <- function(principal, rate, periods) {
+  return_amount <- principal * (1 + rate)^periods
+  return(return_amount)
+}
+# Example usage
+print(compound_interest(1000, 0.05, 5))
+```
+
+## Introduction to Probability Theory
+
+-   Probability theory: Quantifying uncertainty and randomness.
+-   Essential for hypothesis testing, parameter estimation, and prediction.
+
+## Basic Principles and Tools of Probability Theory
+
+-   Introduction to key concepts: Sample Space, Events, Conditional Probability.
+-   Foundational elements for more advanced statistical analysis.
+
+## Multiplicative Property and Chain Rule for Conditional Probability
+
+-   Understanding joint probabilities and conditional dependencies.
+-   Multiplicative Property: P(A ∩ B) = P(A) × P(B \| A).
+-   Chain Rule: Breaking down complex probabilities into simpler components.
+
+## Bayes' Formula and Independence of Events
+
+-   Bayes' theorem: A powerful tool for updating probabilities.
+-   Independence: When the occurrence of one event does not affect another.
+
+## Total Probability Theorem and Bayesian Extensions
+
+-   Total Probability Theorem: Summing probabilities over a partition.
+-   Extended Bayes' Theorem: A cornerstone of Bayesian inference.
+
+## Probability Schools of Thought
+
+-   Overview of Classical, Frequentist, and Bayesian methods.
+-   Each school's impact on financial analytics and decision-making.
+
+## Frequentism in Financial Time Series Econometrics
+
+-   Emphasis on long-run frequencies and parameter estimation.
+-   Frequentist methods in academic research and their applications.
+
+## Bayesian Methods in Market Analysis
+
+-   Bayesian inference: Incorporating prior knowledge and new evidence.
+-   Flexibility of Bayesian methods in adapting to new market information.
+
+## Classical Probability in Financial Analytics
+
+-   Basics of classical probability theory.
+-   Applications in risk assessment and modeling market events.
+
+## Connections Between Probability Paradigms
+
+-   How Classical, Frequentist, and Bayesian methods interrelate.
+-   Integration and overlaps in financial modeling approaches.
+
+## Impact in Financial Analytics
+
+-   Holistic problem-solving through diverse probabilistic approaches.
+-   Innovation and flexibility in financial analysis and modeling.
+
+## Conclusion
+
+-   Recap of the significance of statistics and probability in financial analytics.
+-   The importance of a multi-faceted approach to understanding financial data.
+-   For more details and some sample exercises on this material see <https://q-rap.connect.qub.ac.uk/AFDA/primer.html>
